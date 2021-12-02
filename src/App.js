@@ -5,17 +5,16 @@ import "./styles.css";
 //var color = "blue";
 //var likeCounter = 0;
 export default function App() {
-  const [likeCounter, setlikeCounter] = useState(0);
-  function likeclickHandler() {
-    var newlikeCounter = likeCounter + 1; //processing
-    console.log("clicked " + newlikeCounter + " times");
-    setlikeCounter(newlikeCounter);
+  const [input, setuserInput] = useState("");
+  function inputchangeHandler(event) {
+    //console.log(event.target.value);
+    setuserInput(event.target.value);
   }
   return (
     <div className="App">
       <h1> Inside outt</h1>
-      <button onClick={likeclickHandler}>click </button>
-      {likeCounter}
+      <input onChange={inputchangeHandler} />
+      <div>Welcome {input}</div>
     </div>
   );
 }
