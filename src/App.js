@@ -8,13 +8,13 @@ export default function App() {
   const [likeCounter, setlikeCounter] = useState(0);
   function likeclickHandler() {
     var newlikeCounter = likeCounter + 1; //processing
-    console.log("clicked " + likeCounter + " times");
+    console.log("clicked " + newlikeCounter + " times");
     setlikeCounter(newlikeCounter);
   }
   return (
     <div className="App">
       <h1> Inside outt</h1>
-      <button onClick={likeclickHandler}>click</button>
+      <button onClick={likeclickHandler}>click </button>
       {likeCounter}
     </div>
   );
